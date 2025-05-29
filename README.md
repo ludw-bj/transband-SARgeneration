@@ -3,7 +3,7 @@
 **transband-SARgeneration** is a PyTorch-based implementation of a neural style transfer framework tailored for **cross-band PolSAR image generation**, using **backpropagation-based optimization**. This work builds upon the seminal style transfer method proposed by [Gatys et al.](https://ieeexplore.ieee.org/document/7780634), adapting it to the SAR domain to learn meaningful style representations across frequency bands.
 
 <div align="center">
-  <img src="results/x2ka_gatys/test_latest/images/example_output.png" width="600">
+  <img src="results/x2ka_gatys/test_latest/images/demo_result.png" width="600">
 </div>
 
 ---
@@ -23,16 +23,29 @@ Key features:
 
 ## 📁 Repository Structure
 
+```bash
+
 transband-SARgeneration/
-├── models/ # Gatys Model + VGG backbone
-├── utils/ # Normalization, image saving, scaling tools
+
+├── models/       # Gatys Model + VGG backbone
+
+├── utils/        # Normalization, image saving, scaling tools
+
 ├── visualization/ # Code for visualizing style/content features per layer-channel
-├── results/ # Output images and intermediate results
-├── configs/ # Argument parsing and config settings
-├── train.py # Code for precomputing the Gram matrix of the target band
-├── test.py # Main entrance for cross-band PolSAR image generation
+
+├── results/      # Output images and intermediate results
+
+├── configs/      # Argument parsing and config settings
+
+├── train.py      # Code for precomputing the Gram matrix of the target band
+
+├── test.py       # Main entrance for cross-band PolSAR image generation
+
 ├── requirements.txt
+
 └── README.md
+
+```
 
 ---
 
@@ -49,7 +62,9 @@ We visualize the **optimized input image** that maximally activates a specific c
 
 - The result reveals **what pattern or structure the filter is sensitive to**.
 
-![Content](results/content_visualization/VGG16/Layer_15/grid.png)
+<div align="center">
+  <img src="results/content_visualization/VGG16/Layer_15/grid.png" width="1000">
+</div>
 
 > *(Above: visualization of the feature map corresponding to the 15th layer of VGG16)*
 
@@ -63,7 +78,9 @@ We also provide visualization tools related to **style features**, derived from 
 
 - Visualizing the corresponding optimized image helps interpret how style features are formed by co-activations of different filters.
 
-![Style](results/gram_visualization/VGG16/Layer_3/grid.png)
+<div align="center">
+  <img src="results/gram_visualization/VGG16/Layer_3/grid.png" width="1000">
+</div>
 
 > *(Above: visualization of style representation corresponding to the 3rd layer of VGG16)*
 
