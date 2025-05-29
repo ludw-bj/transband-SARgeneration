@@ -26,7 +26,6 @@ Key features:
 ```bash
 
 transband-SARgeneration/
-
 ├── models/       # Gatys Model + VGG backbone
 ├── utils/        # Normalization, image saving, scaling tools
 ├── visualization/ # Code for visualizing style/content features per layer-channel
