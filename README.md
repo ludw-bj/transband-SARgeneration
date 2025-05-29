@@ -28,21 +28,13 @@ Key features:
 transband-SARgeneration/
 
 ├── models/       # Gatys Model + VGG backbone
-
 ├── utils/        # Normalization, image saving, scaling tools
-
 ├── visualization/ # Code for visualizing style/content features per layer-channel
-
 ├── results/      # Output images and intermediate results
-
 ├── configs/      # Argument parsing and config settings
-
 ├── train.py      # Code for precomputing the Gram matrix of the target band
-
 ├── test.py       # Main entrance for cross-band PolSAR image generation
-
 ├── requirements.txt
-
 └── README.md
 
 ```
